@@ -1,0 +1,285 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+
+
+    <meta name="generator" content="Silex v2.2.7">
+
+    <script type="text/javascript" src="https://editor.silex.me/static/2.7/jquery.js" data-silex-static=""></script>
+    <script type="text/javascript" src="https://editor.silex.me/static/2.7/jquery-ui.js" data-silex-static=""></script>
+    <script type="text/javascript" src="https://editor.silex.me/static/2.7/pageable.js" data-silex-static=""></script>
+    <script type="text/javascript" src="https://editor.silex.me/static/2.7/front-end.js" data-silex-static=""></script>
+    <link rel="stylesheet" href="https://editor.silex.me/static/2.7/normalize.css" data-silex-static="">
+    <link rel="stylesheet" href="https://editor.silex.me/static/2.7/front-end.css" data-silex-static="">
+    <style type="text/css" class="silex-style">div.hero-bottom {top: auto; bottom: 30px;}body {font-family: arial, sans-serif; font-size: 19px; padding: 0 !important;}h1 {font-size: 70px; font-weight: 100; line-height: .8;}h2 {font-size: 25px; font-weight: 100; line-height: 1.5;}.bg-grad {background: linear-gradient(135deg, #82c2ed 0, #a381ee 100%);}.bg-grad2 {background: linear-gradient(135deg, #8adbdb 0, #344e9b 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8adbdb', endColorstr='#344e9b', GradientType=1);}.scroll-down {cursor: pointer;}</style>
+    <script type="text/javascript" class="silex-script">
+        function fullHeight() {
+            var RATIO = 1; // 3/4
+            if($(window).width() < 480) return;
+            $('.hero').each(function() {
+                // get section content (for sections only)
+                var sectionContent = $(this).find('.silex-element-content');
+                // if this is a section, get its content container's min-height and apply it to the section
+                // so that the section has a minimum height
+                var minHeight = sectionContent.length ? sectionContent.css('min-height') : '';
+                $(this).css({
+                    'height': $(window).height()*RATIO,
+                    'min-height': minHeight
+                });
+            });
+            $('.hero-centered').each(function() {
+                var minHeight = $(this).css('min-height');
+                $(this).css({
+                    'top': '50%',
+                    'margin-top': Math.round(-parseInt(minHeight) / 2) + 'px'
+                });
+            });
+        }
+        $(window).resize(fullHeight);
+        $(window).ready(fullHeight);
+    $(window).ready(function() {
+        $('.scroll-down').click(function() {
+            var container = $('html,body'),
+            scrollTo = $('.fold');
+        container.animate({
+            scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+        });
+        });
+    });
+    
+    
+    
+    
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+/*
+ * animation widget from here: https://github.com/silexlabs/Silex/issues/443
+ */
+$(function() {
+    if(!isMobile) {
+        window.sr = ScrollReveal({
+            distance: '100px'
+        });
+        sr.reveal('.from-left', { origin:  'left'});
+        sr.reveal('.from-right', { origin:  'right'});
+        sr.reveal('.from-top', { origin:  'top'});
+        sr.reveal('.from-bottom', { origin:  'bottom'});
+    }
+})
+    </script>
+    <style class="silex-inline-styles" type="text/css">.body-initial {background-color: rgba(255,255,255,1); background-position: center left; background-size: contain; background-attachment: fixed; background-repeat: no-repeat;}.silex-id-1539046137487-3 {width: 1890px; min-height: 998px; top: -2px; left: 0px; background-image: url('../../../../dropbox/get/Untitled%20design222222%20-%20Copy.jpg');}.silex-id-1539046918797-5 {width: 67px; min-height: 62px; top: 764px; left: 1071px;}.silex-id-1539046869197-1 {width: 66px; min-height: 64px; top: 762px; left: 984px;}.silex-id-1539046908829-4 {width: 68px; min-height: 65px; top: 763px; left: 900px;}.silex-id-1539046884253-2 {width: 65px; min-height: 64px; top: 763px; left: 822px;}.silex-id-1539046898621-3 {width: 61px; min-height: 64px; top: 763px; left: 748px;}.silex-id-1539047834341-6 {width: 1131px; min-height: 29px; top: 1048px; left: 364px;}.silex-id-1539049002165-7 {width: 1920px; min-height: 1080px; top: 0px; left: 0px;}.silex-id-1484576249090-5 {min-height: 43px; width: 158px; top: 937px; left: 807px;}.silex-id-1484576238553-4 {min-height: 39px; width: 133px; top: 939px; left: 1003px;}.silex-id-1538523873283-2 {width: 229px; min-height: 100px; background-color: transparent; top: 921px; left: 145px;}.silex-id-1539068876762-1 {min-height: 100px;}.silex-id-1539068876762-0 {min-height: 100px;}.silex-id-1539046433983-0 {width: 495px; min-height: 843px; top: 281px; left: 11px;}.silex-id-1539070039479-3 {width: 221px; min-height: 72px; top: 551px; left: 51px;}.silex-id-1539049132691-8 {width: 638px; background-color: rgb(255, 255, 255); min-height: 480px; top: 259px; left: 767px;}</style>
+    <title>GG Arcade</title>
+    <script type="text/json" class="silex-json-styles">[{"desktop":{"body-initial":{"background-color":"rgba(255,255,255,1)","background-image":"","background-position":"center left","background-size":"contain","background-attachment":"fixed","background-repeat":"no-repeat"},"silex-id-1474394621032-2":{"min-height":"647px","background-color":"transparent","width":"1008px","top":"15px","left":"435px"},"silex-id-1474394605264-1":{"min-height":"100px","width":"100px","top":"100px","left":"100px"},"silex-id-1474394605263-0":{"min-height":"100px","background-color":"transparent"},"silex-id-1478366444112-0":{"min-height":"100px","background-color":"transparent","width":"1200px"},"silex-id-1478366450713-2":{"min-height":"219px","background-color":"transparent","width":"1200px"},"silex-id-1484576238553-4":{"min-height":"39px","width":"133px","top":"939px","left":"1003px"},"silex-id-1484576249090-5":{"min-height":"43px","width":"158px","top":"937px","left":"807px"},"silex-id-1484587463012-10":{"min-height":"331px","background-color":"transparent"},"silex-id-1484590211529-21":{"min-height":"485px","background-color":"transparent"},"silex-id-1484658377172-27":{"min-height":"63px","width":"192px","top":"379px","left":"407px","border-width":"1px 1px 1px 1px ","border-style":"solid","border-radius":"6px 6px 6px 6px ","border-color":"#63b2d8"},"silex-id-1484658633790-28":{"min-height":"1160px","background-color":"transparent"},"silex-id-1484659675214-33":{"min-height":"63px","width":"192px","top":"367px","left":"686px","border-width":"","border-style":"","border-radius":"6px 6px 6px 6px ","border-color":"#000000","background-color":"rgba(245,245,245,1)"},"silex-id-1484659957955-36":{"min-height":"63px","width":"192px","top":"875px","left":"0px","border-width":"","border-style":"","border-radius":"6px 6px 6px 6px ","border-color":"#000000","background-color":"rgba(245,245,245,1)"},"silex-id-1484660025157-37":{"min-height":"720px","background-color":"transparent"},"silex-id-1484661251321-54":{"min-height":"804px","background-color":"transparent"},"silex-id-1484662096459-57":{"min-height":"415px","background-color":"transparent"},"silex-id-1484662129693-60":{"min-height":"477px","background-color":"transparent"},"silex-id-1484662129694-63":{"min-height":"63px","width":"192px","top":"297px","left":"550px","border-width":"1px 1px 1px 1px ","border-style":"solid","border-radius":"6px 6px 6px 6px ","border-color":"#63b2d8"},"silex-id-1484662183052-64":{"min-height":"192px","width":"515px","background-color":"transparent","top":"120px","left":"258px"},"silex-id-1484662183053-65":{"min-height":"83px","width":"494px","top":"9px","left":"11px"},"silex-id-1484662183053-66":{"min-height":"43px","width":"158px","top":"126px","left":"81px"},"silex-id-1484662183053-67":{"min-height":"43px","width":"158px","top":"126px","left":"268px"},"silex-id-1538523832500-0":{"width":"","background-color":"","min-height":"100px"},"silex-id-1538523873283-2":{"width":"229px","min-height":"100px","background-color":"transparent","top":"921px","left":"145px"},"silex-id-1538524081922-5":{"width":"","background-color":"","min-height":"100px"},"silex-id-1538524714747-7":{"width":"638px","background-color":"rgb(255, 255, 255)","min-height":"477px","top":"30px","left":"183px"},"silex-id-1538527490993-4":{"width":"","background-color":"","min-height":"100px"},"silex-id-1538527709689-6":{"width":"108px","min-height":"120px","top":"521px","left":"367px"},"silex-id-1538528221235-9":{"width":"187px","min-height":"123px","top":"528px","left":"477px"},"silex-id-1539046123333-1":{"width":"","background-color":"","min-height":"100px"},"silex-id-1539046137487-3":{"width":"1890px","min-height":"998px","top":"-2px","left":"0px","background-image":"url('../../../../dropbox/get/Untitled%20design222222%20-%20Copy.jpg')"},"silex-id-1539046433983-0":{"width":"495px","min-height":"843px","top":"281px","left":"11px"},"silex-id-1539046869197-1":{"width":"66px","min-height":"64px","top":"762px","left":"984px"},"silex-id-1539046884253-2":{"width":"65px","min-height":"64px","top":"763px","left":"822px"},"silex-id-1539046898621-3":{"width":"61px","min-height":"64px","top":"763px","left":"748px"},"silex-id-1539046908829-4":{"width":"68px","min-height":"65px","top":"763px","left":"900px"},"silex-id-1539046918797-5":{"width":"67px","min-height":"62px","top":"764px","left":"1071px"},"silex-id-1539047834341-6":{"width":"1131px","min-height":"29px","top":"1048px","left":"364px"},"silex-id-1539049002165-7":{"width":"1920px","min-height":"1080px","top":"0px","left":"0px"},"silex-id-1539049132691-8":{"width":"638px","background-color":"rgb(255, 255, 255)","min-height":"480px","top":"259px","left":"767px"},"silex-id-1539068876762-0":{"width":"","background-color":"","min-height":"100px"},"silex-id-1539068876762-1":{"min-height":"100px"},"silex-id-1539070039479-3":{"width":"221px","min-height":"72px","top":"551px","left":"51px"}},"mobile":{"silex-id-1474394621032-2":{"min-height":"871px"},"silex-id-1484590211529-21":{"min-height":"670px"},"silex-id-1484658633790-28":{"min-height":"1425px"},"silex-id-1484661251321-54":{"min-height":"582px"},"silex-id-1484660025157-37":{"min-height":"1205px"}},"prodotypeData":{"component":{"silex-id-1538523873283-2":{"name":"share1","templateName":"share","style":"Flat Web Icon Set - Color","networks":["Facebook","Twitter","Google+","Reddit","LinkedIn","Email"],"title":"GG ARCADE","twitter":"","description":"Global Flash Gaming"}},"style":{}}}]</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.2" data-silex-viewport="">
+
+    <meta name="website-width" content="1000">
+    <style type="text/css" class="silex-style-settings">.website-width {width: 1000px;}</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="description" content="A smart HTML template by @SilexLabs for your project">
+    <link href="../../../../../assets/1484611390_android_phone.png" rel="shortcut icon">
+
+    <meta name="twitter:title" content="GG Arcade">
+    <meta name="og:title" content="GG Arcade">
+    
+    
+    <meta name="twitter:site" content="silexlabs">
+    
+
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta name="publicationPath" content="{&quot;absPath&quot;:&quot;/ce/github/get/sanghyunwon.github.io&quot;,&quot;size&quot;:0,&quot;modified&quot;:&quot;2018-10-09T10:21:58Z&quot;,&quot;name&quot;:&quot;sanghyunwon.github.io&quot;,&quot;isDir&quot;:true,&quot;mime&quot;:&quot;application/git-repo&quot;,&quot;folder&quot;:&quot;&quot;,&quot;path&quot;:&quot;//test-github/master&quot;,&quot;service&quot;:&quot;github&quot;,&quot;url&quot;:&quot;https://editor.silex.me/github/get///test-github/master&quot;}"><!-- Silex HEAD tag do not remove -->
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.2.0/scrollreveal.min.js" type="text/javascript"></script>
+    <!-- End of Silex HEAD tag do not remove --></head>
+
+<body data-silex-id="body-initial" class="body-initial enable-mobile silex-runtime" data-silex-type="container"><div data-silex-type="image" class="editable-style silex-id-1539046137487-3 image-element page-home-page paged-element" data-silex-id="silex-id-1539046137487-3" style=""><img src="../../../../dropbox/get/Untitled%20design222222%20-%20Copy.jpg" class="silex-element-content"></div>
+    <div class="silex-pages">
+
+        <a id="page-home-page" data-silex-type="page" class="page-element">Home Page</a><a id="page-monkey-run" data-silex-type="page" class="page-element">Monkey Run</a></div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-silex-type="image" class="editable-style silex-id-1539046918797-5 image-element page-home-page paged-element paged-element-visible" data-silex-id="silex-id-1539046918797-5" style=""><img src="../../../../dropbox/get/15883-illustration-of-an-arcade-styled-cartoon-alien-ghost-pv.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1539046869197-1 image-element page-home-page paged-element" data-silex-id="silex-id-1539046869197-1" style=""><img src="../../../../dropbox/get/15891-illustration-of-an-arcade-styled-ninja-ghost-pv.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1539046908829-4 image-element page-home-page paged-element paged-element-visible" data-silex-id="silex-id-1539046908829-4" style=""><img src="../../../../dropbox/get/pacman-145854_960_720.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1539046884253-2 image-element page-home-page paged-element" data-silex-id="silex-id-1539046884253-2" style=""><img src="../../../../dropbox/get/15897-illustration-of-an-arcade-styled-geisha-ghost-pv.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1539046898621-3 image-element page-home-page paged-element paged-element-visible" data-silex-id="silex-id-1539046898621-3" style=""><img src="../../../../dropbox/get/pacman-145850_960_720.png" class="silex-element-content"></div><div data-silex-type="text" class="editable-style silex-id-1539047834341-6 text-element page-home-page paged-element" data-silex-id="silex-id-1539047834341-6" style=""><div class="silex-element-content normal"><div style="text-align: center;"><b style="font-family: &quot;courier new&quot;, monospace;">Game Developers! Find our APIs and more information about publishing your own game.</b></div></div></div><div data-silex-type="image" class="editable-style silex-id-1539049002165-7 image-element page-monkey-run paged-element" data-silex-id="silex-id-1539049002165-7" style=""><img src="../../../../dropbox/get/monkey%20run%20background.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1484576249090-5 image-element from-left" data-silex-id="silex-id-1484576249090-5" data-silex-href="#!page-monkey-run" style=""><img src="../../../../../libs/templates/silex-templates/smart-simple/assets/android-market.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1484576238553-4 image-element from-left" data-silex-id="silex-id-1484576238553-4" data-silex-href="#!page-monkey-run" style=""><img src="../../../../../libs/templates/silex-templates/smart-simple/assets/app-store.png" class="silex-element-content"></div><div data-silex-type="html" class="editable-style silex-id-1538523873283-2 html-element silex-component silex-component-share" data-silex-id="silex-id-1538523873283-2" style=""><div class="silex-element-content">
+<ul class="share-buttons" id="id_1538524027315_452">
+  
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com&amp;t=GG ARCADE" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" data-silex-static="" src="https://editor.silex.me/static/2.7/simplesharingbuttons/flat_web_icon_set/color/Facebook.png"></a></li>
+  
+  
+  <li><a href="https://twitter.com/intent/tweet?source=http://yoursite.com&amp;text=GG ARCADE:%20http://yoursite.com&amp;via=" target="_blank" title="Share on Twitter"><img alt="Twitt" data-silex-static="" src="https://editor.silex.me/static/2.7/simplesharingbuttons/flat_web_icon_set/color/Twitter.png"></a></li>
+  
+  
+  <li><a href="https://plus.google.com/share?url=http://yoursite.com" target="_blank" title="Share on Google+"><img alt="Share on Google+" data-silex-static="" src="https://editor.silex.me/static/2.7/simplesharingbuttons/flat_web_icon_set/color/Google%2B.png"></a></li>
+  
+  
+  
+  
+  
+  <li><a href="http://www.reddit.com/submit?url=http://yoursite.com&amp;title=GG ARCADE" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" data-silex-static="" src="https://editor.silex.me/static/2.7/simplesharingbuttons/flat_web_icon_set/color/Reddit.png"></a></li>
+  
+  
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://yoursite.com&amp;title=GG ARCADE&amp;summary=Global Flash Gaming&amp;source=http://yoursite.com" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" data-silex-static="" src="https://editor.silex.me/static/2.7/simplesharingbuttons/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  
+  
+  
+  
+  <li><a href="mailto:?subject=GG ARCADE&amp;body=Global Flash Gaming:%20http://yoursite.com" target="_blank" title="Send email"><img alt="Send by email" data-silex-static="" src="https://editor.silex.me/static/2.7/simplesharingbuttons/flat_web_icon_set/color/Email.png"></a></li>
+  
+</ul>
+
+<style type="text/css">#id_1538524027315_452.share-buttons {list-style: none; padding: 0;}#id_1538524027315_452.share-buttons li {display: inline;}#id_1538524027315_452.share-buttons .sr-only {position: absolute; clip: rect(1px, 1px, 1px, 1px); padding: 0; border: 0; height: 1px; width: 1px; overflow: hidden;}</style>
+</div></div><div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1539068876762-1 section-element page-home-page paged-element paged-element-visible" data-silex-id="silex-id-1539068876762-1"><div data-silex-type="container" class="editable-style silex-id-1539068876762-0 container-element silex-element-content silex-container-content website-width prevent-draggable" data-silex-id="silex-id-1539068876762-0"></div></div><div data-silex-type="text" class="editable-style silex-id-1539046433983-0 text-element page-home-page paged-element" data-silex-id="silex-id-1539046433983-0" style=""><div class="silex-element-content normal"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px; color: rgb(247, 249, 248);"><h2 class="heading2"><font face="courier new, monospace" size="6"><span style="color: rgb(255, 255, 255);"></span>About Us</font></h2><h2 class="heading2"><font face="courier new, monospace" size="6">Categories</font></h2><div><h2 class="heading2"><font face="courier new, monospace" size="6">Contact</font></h2></div><h2 class="heading2"><font face="courier new, monospace" size="6">Development</font></h2><h2 class="heading2"><br></h2></blockquote><h2 class="heading2"><p class="normal" style="color: rgb(255, 255, 255);"><br></p></h2></div></div><div data-silex-type="text" class="editable-style silex-id-1539070039479-3 text-element page-home-page paged-element paged-element-visible" data-silex-id="silex-id-1539070039479-3" style="" data-silex-href="#!page-monkey-run"><div class="silex-element-content normal"><h2 class="heading2" style="color: rgb(255, 255, 255);"><font face="courier new, monospace" size="6">Games</font></h2></div></div><div data-silex-type="html" class="editable-style silex-id-1539049132691-8 html-element page-monkey-run paged-element paged-element-hidden" data-silex-id="silex-id-1539049132691-8" style=""><div class="silex-element-content"><embed src="https://dl.dropboxusercontent.com/s/26remuisdzdbu6d/monkey%20game.swf" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" height="480" width="640"></div></div></body></html>
